@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        body {
+            background-color: rgb(27, 27, 65);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Qual seu Pais de origem: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var paisInput = document.getElementById('pais').value
+            var res = document.querySelector('div#res')
+            var paisRes = 'Brasil'
+            res.innerHTML = `<p>Vivendo em ${paisInput}</p>`
+            if (paisInput == paisRes) {
+                res.innerHTML += 'Você é Brasilero(a)'
+            }else{
+                res.innerHTML += 'Você é Estrangeiro(a)'
+            }
+        }
+    </script>
+
+</body>
+</html>
